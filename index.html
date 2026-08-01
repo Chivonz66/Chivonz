@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIVONZ // NEXUS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        void: '#020205',
+                        surface: '#070810',
+                        neonblue: '#00f2fe',
+                        neonpink: '#ff007f',
+                        neonviolet: '#7928ca'
+                    },
+                    fontFamily: {
+                        mono: ['Courier New', Courier, monospace]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020205;
+            color: #94a3b8;
+            overflow-x: hidden;
+        }
+
+        .ambient-bg {
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.07) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 0, 127, 0.07) 0%, transparent 40%),
+                linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(13, 15, 28, 0.85) 0%, rgba(7, 8, 16, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 242, 254, 0.3);
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.1);
+            transform: translateY(-4px);
+        }
+
+        /* Modal için özel koyu cam arka plan */
+        .modal-glass {
+            background: rgba(5, 6, 12, 0.95);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            backdrop-filter: blur(25px);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(0, 242, 254, 0.03);
+        }
+
+        .blue-gradient-text {
+            background: linear-gradient(135deg, #fff 30%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pink-gradient-text {
+            background: linear-gradient(135deg, #fff 30%, #ff007f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #020205; }
+        ::-webkit-scrollbar-thumb { background: rgba(0, 242, 254, 0.2); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255, 0, 127, 0.4); }
+    </style>
+</head>
+<body class="min-h-screen ambient-bg selection:bg-neonblue selection:text-black">
+
+    <!-- Floating Navbar -->
+    <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-4xl z-50">
+        <nav class="glass-card rounded-2xl px-6 h-16 flex items-center justify-between border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-neonblue to-neonpink p-[1px] flex items-center justify-center">
+                    <div class="w-full h-full bg-surface rounded-[11px] flex items-center justify-center text-neonblue font-extrabold text-xs">
+                        C
+                    </div>
+                </div>
+                <span class="font-extrabold text-white tracking-widest text-sm">CHIVONZ<span class="text-neonblue">.</span></span>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-2 text-xs font-mono text-gray-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>SYSTEM_ACTIVE</span>
+                </div>
+                <button onclick="toggleAdminModal()" class="px-4 py-2 rounded-xl bg-gradient-to-r from-neonblue/10 to-neonpink/10 border border-white/10 text-white hover:border-neonblue font-semibold text-xs transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(0,242,254,0.1)]">
+                    <svg class="w-3.5 h-3.5 text-neonblue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    YÖNETİM
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-6 pt-36 pb-24">
+
+        <!-- Hero Section -->
+        <section class="glass-card rounded-3xl p-8 md:p-12 mb-8 relative overflow-hidden floating">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-neonblue/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-neonpink/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neonblue/10 text-neonblue text-xs font-semibold mb-6 border border-neonblue/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-neonblue animate-ping"></span>
+                <span>STATUS: ARCHITECTING DIGITAL WORLDS</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Dijital Sınırları Aşan <br>
+                <span id="hero-name" class="blue-gradient-text">Yazılım & Altyapı</span>
+            </h1>
+
+            <p id="hero-desc" class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl font-light">
+                Oyun altyapıları, özel otomasyon sistemleri ve modern mimariler geliştiren bağımsız geliştirici. Kod yazarak sınırları yeniden tanımlıyorum.
+            </p>
+        </section>
+
+        <!-- Dynamic Grid Showcase -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Systems Module -->
+            <div class="glass-card rounded-3xl p-7 md:col-span-2 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-neonblue uppercase tracking-widest">// Core Systems</span>
+                        <span class="w-2 h-2 rounded-full bg-neonblue"></span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-3">Sunucu Mimarileri & Otomasyonlar</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Yüksek performanslı özel oyun sunucusu altyapıları, entegre ekonomi sistemleri ve gelişmiş güvenlik filtrelerine sahip Discord botları inşa ediyorum.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+                    <span class="px-3 py-1 rounded-xl bg-white/5 text-gray-300 text-xs font-mono">Java / Plugins</span>
+                    <span class="px-3 py-1 rounded-xl bg-white/5 text-gray-300 text-xs font-mono">Python / APIs</span>
+                </div>
+            </div>
+
+            <!-- Tech Tree Module -->
+            <div class="glass-card rounded-3xl p-7 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-neonpink uppercase tracking-widest">// Tech Stack</span>
+                        <span class="w-2 h-2 rounded-full bg-neonpink"></span>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-4">Yetkinlikler</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-xl bg-surface border border-white/10 text-xs text-gray-200 font-medium">Java</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-surface border border-white/10 text-xs text-gray-200 font-medium">Python</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-surface border border-white/10 text-xs text-gray-200 font-medium">Tailwind</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-surface border border-white/10 text-xs text-gray-200 font-medium">VS Code</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-surface border border-white/10 text-xs text-gray-200 font-medium">Blockbench</span>
+                        <span class="px-3 py-1.5 rounded-xl bg-surface border border-white/10 text-xs text-gray-200 font-medium">Premiere</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secure Connection Channel -->
+        <section class="glass-card rounded-3xl p-8 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-neonblue/5 via-transparent to-neonpink/5 pointer-events-none"></div>
+            <h2 class="text-xl font-bold text-white mb-2 pink-gradient-text">// İLETİŞİM KANALLARI</h2>
+            <p class="text-gray-400 text-sm mb-6 max-w-md mx-auto">Projelerimi incelemek veya doğrudan bağlantı kurmak için erişim noktaları:</p>
+            <div class="flex justify-center gap-4">
+                <a id="contact-github" href="https://github.com" target="_blank" class="px-6 py-3 rounded-2xl bg-surface border border-white/10 text-white font-semibold text-xs hover:border-neonblue hover:text-neonblue transition-all shadow-lg flex items-center gap-2">
+                    GitHub Profilim
+                </a>
+                <a id="contact-discord" href="https://discord.com" target="_blank" class="px-6 py-3 rounded-2xl bg-surface border border-white/10 text-white font-semibold text-xs hover:border-neonpink hover:text-neonpink transition-all shadow-lg flex items-center gap-2">
+                    Discord Profilim
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-xs text-gray-500 border-t border-white/5 font-mono">
+        <p id="footer-text">© 2026 Chivonz. All rights reserved.</p>
+    </footer>
+
+    <!-- Admin Panel Modal -->
+    <div id="admin-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="modal-glass w-full max-w-md rounded-3xl p-7 shadow-2xl">
+            
+            <!-- Login View -->
+            <div id="admin-login-view">
+                <div class="flex justify-between items-center mb-5 pb-3 border-b border-white/10">
+                    <h3 class="text-white font-bold text-sm flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-neonpink"></span> GÜVENLİ YETKİLENDİRME
+                    </h3>
+                    <button onclick="toggleAdminModal()" class="text-gray-400 hover:text-white font-bold text-base">✕</button>
+                </div>
+                <p class="text-gray-300 text-xs mb-4">Panele erişmek için yönetici şifresini girin. <span class="text-neonblue font-mono">(Şifre: chivonz123)</span></p>
+                <input type="password" id="admin-pass-input" placeholder="Şifre (chivonz123)" class="w-full bg-[#030408] border border-neonblue/30 rounded-2xl px-4 py-3 text-white text-xs mb-4 focus:outline-none focus:border-neonblue font-mono">
+                <button onclick="checkAdminPassword()" class="w-full py-3.5 bg-gradient-to-r from-neonblue to-neonpink text-black font-extrabold rounded-2xl text-xs hover:opacity-90 transition-all shadow-[0_0_20px_rgba(0,242,254,0.3)] cursor-pointer">ERİŞİM SAĞLA</button>
+                <p id="login-error" class="text-neonpink text-xs mt-3 hidden font-bold">> ERİŞİM REDDEDİLDİ: Hatalı Şifre!</p>
+            </div>
+
+            <!-- Management View -->
+            <div id="admin-panel-view" class="hidden space-y-4 text-xs">
+                <div class="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
+                    <h3 class="text-white font-bold text-sm flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-neonblue"></span> SİSTEM KONTROL PANELİ
+                    </h3>
+                    <button onclick="toggleAdminModal()" class="text-gray-400 hover:text-white font-bold text-base">✕</button>
+                </div>
+                <div>
+                    <label class="text-gray-300 block mb-1 font-semibold">İsim / Başlık:</label>
+                    <input type="text" id="inp-name" class="w-full bg-[#030408] border border-white/15 rounded-2xl px-3.5 py-3 text-white text-xs focus:outline-none focus:border-neonblue">
+                </div>
+                <div>
+                    <label class="text-gray-300 block mb-1 font-semibold">Hakkımda Açıklama:</label>
+                    <textarea id="inp-desc" rows="3" class="w-full bg-[#030408] border border-white/15 rounded-2xl px-3.5 py-3 text-white text-xs focus:outline-none focus:border-neonblue"></textarea>
+                </div>
+                <div>
+                    <label class="text-gray-300 block mb-1 font-semibold">GitHub Bağlantısı:</label>
+                    <input type="text" id="inp-github" class="w-full bg-[#030408] border border-white/15 rounded-2xl px-3.5 py-3 text-white text-xs focus:outline-none focus:border-neonblue">
+                </div>
+                <div>
+                    <label class="text-gray-300 block mb-1 font-semibold">Discord Bağlantısı (Profil Linki):</label>
+                    <input type="text" id="inp-discord" class="w-full bg-[#030408] border border-white/15 rounded-2xl px-3.5 py-3 text-white text-xs focus:outline-none focus:border-neonblue" placeholder="https://discord.com/users/ID">
+                </div>
+                <div class="flex gap-3 pt-3">
+                    <button onclick="saveChanges()" class="flex-1 py-3.5 bg-gradient-to-r from-neonblue to-neonpink text-black font-extrabold rounded-2xl hover:opacity-95 transition-all shadow-[0_0_15px_rgba(0,242,254,0.2)] cursor-pointer">KAYDET</button>
+                    <button onclick="resetData()" class="px-4 py-3.5 bg-neonpink/10 border border-neonpink/30 text-neonpink font-semibold rounded-2xl hover:bg-neonpink hover:text-black transition-all cursor-pointer">SIFIRLA</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripting & Dynamic Controls -->
+    <script>
+        const defaultData = {
+            name: "Yazılım & Altyapı",
+            desc: "Oyun altyapıları, özel otomasyon sistemleri ve modern mimariler geliştiren bağımsız geliştirici. Kod yazarak sınırları yeniden tanımlıyorum.",
+            github: "https://github.com",
+            discord: "https://discord.com"
+        };
+
+        let siteData = JSON.parse(localStorage.getItem('chivonz_creative_data')) || defaultData;
+
+        function renderData() {
+            document.getElementById('hero-name').innerText = siteData.name;
+            document.getElementById('hero-desc').innerText = siteData.desc;
+            document.getElementById('contact-github').href = siteData.github;
+            document.getElementById('contact-discord').href = siteData.discord;
+            document.getElementById('footer-text').innerText = `© 2026 Chivonz. All rights reserved.`;
+        }
+
+        renderData();
+
+        function toggleAdminModal() {
+            document.getElementById('admin-modal').classList.toggle('hidden');
+        }
+
+        function checkAdminPassword() {
+            const pass = document.getElementById('admin-pass-input').value;
+            const errorMsg = document.getElementById('login-error');
+            
+            if (pass === "chivonz123") {
+                errorMsg.classList.add('hidden');
+                document.getElementById('admin-login-view').classList.add('hidden');
+                document.getElementById('admin-panel-view').classList.remove('hidden');
+                
+                document.getElementById('inp-name').value = siteData.name;
+                document.getElementById('inp-desc').value = siteData.desc;
+                document.getElementById('inp-github').value = siteData.github;
+                document.getElementById('inp-discord').value = siteData.discord;
+            } else {
+                errorMsg.classList.remove('hidden');
+            }
+        }
+
+        function saveChanges() {
+            siteData.name = document.getElementById('inp-name').value;
+            siteData.desc = document.getElementById('inp-desc').value;
+            siteData.github = document.getElementById('inp-github').value;
+            siteData.discord = document.getElementById('inp-discord').value;
+
+            localStorage.setItem('chivonz_creative_data', JSON.stringify(siteData));
+            renderData();
+            toggleAdminModal();
+            alert("Sistem başarıyla güncellendi!");
+        }
+
+        function resetData() {
+            if (confirm("Fabrika ayarlarına dönmek istediğine emin misin?")) {
+                localStorage.removeItem('chivonz_creative_data');
+                siteData = defaultData;
+                renderData();
+                toggleAdminModal();
+            }
+        }
+    </script>
+</body>
+</html>
