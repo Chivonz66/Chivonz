@@ -58,7 +58,6 @@
             transform: translateY(-4px);
         }
 
-        /* Modal için özel koyu cam arka plan */
         .modal-glass {
             background: rgba(5, 6, 12, 0.95);
             border: 1px solid rgba(0, 242, 254, 0.2);
@@ -216,9 +215,9 @@
                     </h3>
                     <button onclick="toggleAdminModal()" class="text-gray-400 hover:text-white font-bold text-base">✕</button>
                 </div>
-                <p class="text-gray-300 text-xs mb-4">Panele erişmek için yönetici şifresini girin. <span class="text-neonblue font-mono">(Şifre: chivonz123)</span></p>
-                <input type="password" id="admin-pass-input" placeholder="Şifre (chivonz123)" class="w-full bg-[#030408] border border-neonblue/30 rounded-2xl px-4 py-3 text-white text-xs mb-4 focus:outline-none focus:border-neonblue font-mono">
-                <button onclick="checkAdminPassword()" class="w-full py-3.5 bg-gradient-to-r from-neonblue to-neonpink text-black font-extrabold rounded-2xl text-xs hover:opacity-90 transition-all shadow-[0_0_20px_rgba(0,242,254,0.3)] cursor-pointer">ERİŞİM SAĞLA</button>
+                <p class="text-gray-300 text-xs mb-4">Yönetim paneline erişmek için şifrenizi girin.</p>
+                <input type="password" id="admin-pass-input" placeholder="Şifrenizi girin..." class="w-full bg-[#030408] border border-neonblue/30 rounded-2xl px-4 py-3 text-white text-xs mb-4 focus:outline-none focus:border-neonblue font-mono">
+                <button onclick="checkAdminPassword()" class="w-full py-3.5 bg-gradient-to-r from-neonblue to-neonpink text-black font-extrabold rounded-2xl text-xs hover:opacity-95 transition-all shadow-[0_0_20px_rgba(0,242,254,0.3)] cursor-pointer">ERİŞİM SAĞLA</button>
                 <p id="login-error" class="text-neonpink text-xs mt-3 hidden font-bold">> ERİŞİM REDDEDİLDİ: Hatalı Şifre!</p>
             </div>
 
