@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>CHIVONZ — Digital Development Studio</title>
+    <meta name="description" content="Web development, Minecraft systems, Discord automation and custom digital infrastructure — engineered around your project.">
+    <meta name="theme-color" content="#060609">
+    <link rel="canonical" href="https://chivonz66.github.io/Chivonz/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chivonz66.github.io/Chivonz/">
+    <meta property="og:title" content="CHIVONZ — Digital Development Studio">
+    <meta property="og:description" content="Web development, Minecraft systems, Discord automation and custom digital infrastructure.">
+    <meta property="og:site_name" content="CHIVONZ">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CHIVONZ — Digital Development Studio">
+    <meta name="twitter:description" content="Web development, Minecraft systems, Discord automation and custom digital infrastructure.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%234f7cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23060609'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EC%3C/text%3E%3C/svg%3E">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="page-shell">
+        <!-- ================= NAVBAR ================= -->
+        <header class="site-header" id="siteHeader">
+            <div class="container nav-wrap">
+                <a class="brand" href="index.html" aria-label="CHIVONZ — ana sayfa">
+                    <span class="brand-mark" aria-hidden="true">C</span>
+                    <span class="brand-name">CHIVONZ</span>
+                </a>
+
+                <nav class="nav-desktop" aria-label="Ana menü">
+                    <a class="nav-link is-active" href="index.html">Home</a>
+                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href="minecraft.html">Minecraft</a>
+                    <a class="nav-link" href="web.html">Web</a>
+                    <a class="nav-link" href="discord.html">Discord</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </nav>
+
+                <div class="nav-cta">
+                    <a class="btn btn-primary btn-sm btn-magnetic" href="contact.html">Start a Project</a>
+                </div>
+                <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menüyü aç/kapat">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Fullscreen mobile menu -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <nav class="mm-links" aria-label="Mobil gezinme">
+                <a class="mm-link is-active" href="index.html"><span class="mm-num">01</span>Home</a>
+                <a class="mm-link" href="services.html"><span class="mm-num">02</span>Services</a>
+                <a class="mm-link" href="minecraft.html"><span class="mm-num">03</span>Minecraft</a>
+                <a class="mm-link" href="web.html"><span class="mm-num">04</span>Web</a>
+                <a class="mm-link" href="discord.html"><span class="mm-num">05</span>Discord</a>
+                <a class="mm-link" href="projects.html"><span class="mm-num">06</span>Projects</a>
+                <a class="mm-link" href="about.html"><span class="mm-num">07</span>About</a>
+                <a class="mm-link" href="contact.html"><span class="mm-num">08</span>Contact</a>
+            </nav>
+            <div class="mm-footer">
+                <a class="btn btn-primary" href="contact.html">Start a Project</a>
+                <a class="link-arrow" href="https://github.com/chivonz66" target="_blank" rel="noopener"><span class="link-underline">GitHub</span> →</a>
+            </div>
+        </div>
+
+        <main id="main">
+
+            <!-- ================= HERO ================= -->
+            <section class="home-hero">
+                <div class="container home-hero-inner">
+                    <div class="hero-badge reveal">
+                        <span class="status-note"><span class="dot" aria-hidden="true"></span>AVAILABLE FOR PROJECTS</span>
+                        <span class="eyebrow">DIGITAL DEVELOPMENT STUDIO</span>
+                    </div>
+
+                    <h1 class="hero-title reveal" data-delay="1">
+                        <span class="line">Building digital</span>
+                        <span class="line">systems <span class="grad-text">without limits.</span></span>
+                    </h1>
+
+                    <p class="hero-sub reveal" data-delay="2">
+                        Web experiences, Minecraft systems, Discord automation and
+                        custom digital infrastructure — engineered around your project.
+                    </p>
+
+                    <div class="hero-actions reveal" data-delay="3">
+                        <a class="btn btn-primary btn-lg btn-magnetic" href="services.html">Explore Services</a>
+                        <a class="btn btn-ghost btn-lg" href="contact.html">Start a Project</a>
+                    </div>
+
+                    <div class="hero-meta reveal" data-delay="4">
+                        <span class="chip">WEB</span>
+                        <span class="chip">MINECRAFT</span>
+                        <span class="chip">DISCORD &amp; AUTOMATION</span>
+                        <span class="chip">CUSTOM SYSTEMS</span>
+                        <span class="chip">UI / GUI</span>
+                    </div>
+
+                    <span class="hero-scroll" aria-hidden="true">SCROLL</span>
+                </div>
+            </section>
+
+            <!-- ================= TICKER ================= -->
+            <div class="ticker" aria-hidden="true">
+                <div class="ticker-track">
+                    <span class="ticker-item">Web Development</span>
+                    <span class="ticker-item">Minecraft Systems</span>
+                    <span class="ticker-item">Discord &amp; Automation</span>
+                    <span class="ticker-item">Server Infrastructure</span>
+                    <span class="ticker-item">UI / GUI Design</span>
+                    <span class="ticker-item">Custom Software</span>
+                    <span class="ticker-item">Web Development</span>
+                    <span class="ticker-item">Minecraft Systems</span>
+                    <span class="ticker-item">Discord &amp; Automation</span>
+                    <span class="ticker-item">Server Infrastructure</span>
+                    <span class="ticker-item">UI / GUI Design</span>
+                    <span class="ticker-item">Custom Software</span>
+                </div>
+            </div>
+
+            <!-- ================= INTRO ================= -->
+            <section class="section">
+                <div class="container intro-statement reveal">
+                    <p class="is-text">CHIVONZ is a digital studio for <em>web development</em>, <em>Minecraft systems</em> and <em>custom infrastructure</em> — built around your project, <mark>not a template.</mark></p>
+                    <div class="intro-meta">
+                        <span class="tag accent">SYSTEM ENGINEERING</span>
+                        <span class="tag">STATIC-FIRST / PERFORMANT</span>
+                        <span class="tag">UÇTAN UCA TESLİMAT</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SERVICES PREVIEW ================= -->
+            <section class="section section-tight">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">// Services</p>
+                        <h2 class="h2">What I build<span class="grad-text">.</span></h2>
+                    </div>
+
+                    <div class="service-list">
+                        <a class="service-row reveal" href="web.html">
+                            <span class="sr-index">01</span>
+                            <span class="sr-title">Web Development</span>
+                            <span class="sr-meta">Siteler · Paneller</span>
+                            <span class="sr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+                        </a>
+                        <a class="service-row reveal" href="minecraft.html">
+                            <span class="sr-index">02</span>
+                            <span class="sr-title">Minecraft Development</span>
+                            <span class="sr-meta">Plugin · Sistemler</span>
+                            <span class="sr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+                        </a>
+                        <a class="service-row reveal" href="discord.html">
+                            <span class="sr-index">03</span>
+                            <span class="sr-title">Discord &amp; Automation</span>
+                            <span class="sr-meta">Bot · Otomasyon</span>
+                            <span class="sr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+                        </a>
+                        <a class="service-row reveal" href="contact.html">
+                            <span class="sr-index">04</span>
+                            <span class="sr-title">Server Systems</span>
+                            <span class="sr-meta">Altyapı · Optimizasyon</span>
+                            <span class="sr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+                        </a>
+                        <a class="service-row reveal" href="contact.html">
+                            <span class="sr-index">05</span>
+                            <span class="sr-title">UI / GUI Design</span>
+                            <span class="sr-meta">Web &amp; Oyun içi</span>
+                            <span class="sr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+                        </a>
+                        <a class="service-row reveal" href="contact.html">
+                            <span class="sr-index">06</span>
+                            <span class="sr-title">Custom Software</span>
+                            <span class="sr-meta">Özel Sistemler</span>
+                            <span class="sr-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+                        </a>
+                    </div>
+
+                    <div style="margin-top:28px" class="reveal">
+                        <a class="link-arrow" href="services.html"><span class="link-underline">Tüm hizmetleri incele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= MINECRAFT FEATURE ================= -->
+            <section class="section">
+                <div class="container">
+                    <div class="feature-split">
+                        <div class="fs-copy reveal">
+                            <p class="eyebrow">// Minecraft Development</p>
+                            <h2 class="h2">Minecraft systems.<br>Built different.</h2>
+                            <p class="lead">
+                                Custom plugins, GUIs, economy, clan and PvP systems —
+                                engineered around your server instead of forcing a template into it.
+                            </p>
+                            <div class="fs-actions">
+                                <a class="btn btn-primary btn-magnetic" href="minecraft.html">Explore Minecraft Development</a>
+                                <a class="link-arrow accent" href="services.html"><span class="link-underline">Tüm sistemler</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+                            </div>
+                        </div>
+                        <div class="fs-visual reveal" data-delay="1">
+                            <div class="window">
+                                <div class="window-bar">
+                                    <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                    <span class="window-title">CHIVONZ.SYSTEM — LIVE PREVIEW</span>
+                                </div>
+                                <div class="dash">
+                                    <div class="dash-row"><span class="dash-key">Clan Module</span><span class="dash-val ok">OK</span></div>
+                                    <div class="dash-row"><span class="dash-key">Economy Core</span><span class="dash-val ok">OK</span></div>
+                                    <div class="dash-row"><span class="dash-key">PvP Ladder</span><span class="dash-val ok">OK</span></div>
+                                    <div class="dash-row"><span class="dash-key">Discord Bridge</span><span class="dash-val sys">LINKED</span></div>
+                                    <div class="dash-row"><span class="dash-key">Database Sync</span><span class="dash-val ok">SYNCED</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= WEB FEATURE ================= -->
+            <section class="section">
+                <div class="container">
+                    <div class="feature-split">
+                        <div class="fs-visual reveal" data-delay="1">
+                            <div class="window browser">
+                                <div class="window-bar">
+                                    <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                    <address><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>chivonz66.github.io</address>
+                                </div>
+                                <div class="browser-body">
+                                    <div class="browser-hero" aria-hidden="true">
+                                        <div class="browser-nav-mock"></div>
+                                        <div class="browser-title-lines"><span></span><span></span><span></span></div>
+                                        <div class="browser-cta-mock"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fs-copy reveal">
+                            <p class="eyebrow">// Web Development</p>
+                            <h2 class="h2">Web experiences<br>that feel different.</h2>
+                            <p class="lead">
+                                Landing pages, portfolios, dashboards and Minecraft server
+                                websites — fast, semantic and enjoyable on every screen.
+                            </p>
+                            <div class="fs-actions">
+                                <a class="btn btn-ghost" href="web.html">Explore Web Development</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PROJECTS PREVIEW ================= -->
+            <section class="section section-tight">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">// Selected Projects</p>
+                        <h2 class="h2">Work in progress<span class="grad-text">.</span></h2>
+                    </div>
+
+                    <div class="home-projects">
+                        <article class="home-project reveal">
+                            <span class="hp-cat">Minecraft</span>
+                            <h3>Luminacraft</h3>
+                            <p>Sunucuya özel sistem ve eklenti geliştirme çalışması; klan, ekonomi ve yönetim altyapısı.</p>
+                            <div class="hp-foot">
+                                <span class="badge wip">Devam ediyor</span>
+                                <a class="link-arrow accent" href="projects/luminacraft.html"><span class="link-underline">Detay</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+                            </div>
+                        </article>
+
+                        <article class="home-project reveal" data-delay="1">
+                            <span class="hp-cat">Web</span>
+                            <h3>CHIVONZ Studio / Bu site</h3>
+                            <p>Bu stüdyo sitesi: statik öncelikli, çok sayfalı, GitHub Pages üzerinde yayında.</p>
+                            <div class="hp-foot">
+                                <span class="badge live">Yayında</span>
+                                <a class="link-arrow accent" href="projects/chivonz.html"><span class="link-underline">Detay</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+                            </div>
+                        </article>
+
+                        <article class="home-project reveal" data-delay="2">
+                            <span class="hp-cat">Discord</span>
+                            <h3>Discord Bot Sistemleri</h3>
+                            <p>Moderasyon, ticket, doğrulama ve loglama botları; Minecraft sunucusuyla köprü kuran entegrasyon.</p>
+                            <div class="hp-foot">
+                                <span class="badge wip">Devam ediyor</span>
+                                <a class="link-arrow accent" href="projects/discord-bots.html"><span class="link-underline">Detay</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div style="margin-top:32px" class="reveal">
+                        <a class="link-arrow" href="projects.html"><span class="link-underline">View all projects</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= PROCESS PREVIEW ================= -->
+            <section class="section section-tight">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">// Process</p>
+                        <h2 class="h2">How I work<span class="grad-text">.</span></h2>
+                    </div>
+
+                    <div class="process-steps">
+                        <div class="process-step reveal"><span class="ps-num"></span><h3>Discover</h3><p>İhtiyaç analizi ve proje hedeflerinin netleştirilmesi.</p></div>
+                        <div class="process-step reveal" data-delay="1"><span class="ps-num"></span><h3>Plan</h3><p>Mimari, teknolojiler ve veri akışının planlanması.</p></div>
+                        <div class="process-step reveal" data-delay="2"><span class="ps-num"></span><h3>Build</h3><p>Geliştirme ve sürüm yönetimi, test odaklı ilerleyiş.</p></div>
+                        <div class="process-step reveal" data-delay="3"><span class="ps-num"></span><h3>Test</h3><p>Performans, güvenlik ve uyumluluk kontrolleri.</p></div>
+                        <div class="process-step reveal" data-delay="4"><span class="ps-num"></span><h3>Deliver</h3><p>Teslim, yayına alma ve sonraki destek.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= FINAL CTA ================= -->
+            <section class="section">
+                <div class="container">
+                    <div class="final-cta reveal">
+                        <p class="eyebrow">// Let's talk</p>
+                        <h2 class="h2">Ready to <span class="grad-text">build?</span></h2>
+                        <p class="lead">Projenizi anlatın — ihtiyacınıza uygun sistemi birlikte planlayalım.</p>
+                        <div class="cta-actions">
+                            <a class="btn btn-primary btn-lg btn-magnetic" href="contact.html">Start a Project</a>
+                            <a class="btn btn-ghost btn-lg" href="services.html">Explore Services</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span><span class="brand-name">CHIVONZ</span></a>
+                        <p>Digital Development Studio — web, Minecraft ve özel sistemler üzerine kurulu bağımsız geliştirme atölyesi.</p>
+                        <a class="btn btn-ghost btn-sm" href="contact.html">Start a Project</a>
+                    </div>
+                    <nav class="footer-col" aria-label="Sayfalar">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer-col" aria-label="Hizmetler">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="web.html">Web Development</a></li>
+                            <li><a href="minecraft.html">Minecraft Development</a></li>
+                            <li><a href="discord.html">Discord &amp; Automation</a></li>
+                            <li><a href="services.html">Server Systems</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/chivonz66" target="_blank" rel="noopener">GitHub →</a></li>
+                            <li><a href="contact.html">Discord</a></li>
+                            <li><a href="contact.html">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© <span id="footerYear">2026</span> CHIVONZ. Tüm hakları saklıdır.</p>
+                    <p><span class="footer-dot" aria-hidden="true"></span>Design &amp; code by CHIVONZ</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

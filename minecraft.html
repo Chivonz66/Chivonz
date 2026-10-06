@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CHIVONZ — Minecraft Development</title>
+    <meta name="description" content="Custom plugin, GUI and infrastructure systems engineered around your Minecraft server: clans, economy, PvP, quests and Discord integration.">
+    <meta name="theme-color" content="#060609">
+    <link rel="canonical" href="https://chivonz66.github.io/Chivonz/minecraft.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chivonz66.github.io/Chivonz/minecraft.html">
+    <meta property="og:title" content="CHIVONZ — Minecraft Development">
+    <meta property="og:description" content="Custom systems engineered around your server.">
+    <meta property="og:site_name" content="CHIVONZ">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CHIVONZ — Minecraft Development">
+    <meta name="twitter:description" content="Custom systems engineered around your server.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%234f7cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23060609'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='url(%23g)'%3EC%3C/text%3E%3C/svg%3E">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">İçeriğe geç</a>
+    <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <div class="page-shell">
+        <header class="site-header" id="siteHeader">
+            <div class="container nav-wrap">
+                <a class="brand" href="index.html" aria-label="CHIVONZ — ana sayfa">
+                    <span class="brand-mark" aria-hidden="true">C</span>
+                    <span class="brand-name">CHIVONZ</span>
+                </a>
+                <nav class="nav-desktop" aria-label="Ana menü">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link is-active" href="minecraft.html">Minecraft</a>
+                    <a class="nav-link" href="web.html">Web</a>
+                    <a class="nav-link" href="discord.html">Discord</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </nav>
+                <div class="nav-cta">
+                    <a class="btn btn-primary btn-sm btn-magnetic" href="contact.html">Start a Project</a>
+                </div>
+                <button class="nav-burger" id="navBurger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menüyü aç/kapat">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <nav class="mm-links" aria-label="Mobil gezinme">
+                <a class="mm-link" href="index.html"><span class="mm-num">01</span>Home</a>
+                <a class="mm-link" href="services.html"><span class="mm-num">02</span>Services</a>
+                <a class="mm-link is-active" href="minecraft.html"><span class="mm-num">03</span>Minecraft</a>
+                <a class="mm-link" href="web.html"><span class="mm-num">04</span>Web</a>
+                <a class="mm-link" href="discord.html"><span class="mm-num">05</span>Discord</a>
+                <a class="mm-link" href="projects.html"><span class="mm-num">06</span>Projects</a>
+                <a class="mm-link" href="about.html"><span class="mm-num">07</span>About</a>
+                <a class="mm-link" href="contact.html"><span class="mm-num">08</span>Contact</a>
+            </nav>
+            <div class="mm-footer">
+                <a class="btn btn-primary" href="contact.html">Start a Project</a>
+                <a class="link-arrow" href="https://github.com/chivonz66" target="_blank" rel="noopener"><span class="link-underline">GitHub</span> →</a>
+            </div>
+        </div>
+
+        <main id="main">
+
+            <!-- HERO -->
+            <section class="page-hero">
+                <div class="container">
+                    <p class="eyebrow reveal">// Minecraft Development</p>
+                    <h1 class="h1 reveal" data-delay="1">Minecraft.<br><span class="grad-text">Built different.</span></h1>
+                    <p class="lead reveal" data-delay="2">Custom systems engineered around your server — not a template forced into it.</p>
+                    <div class="hero-meta reveal" data-delay="3">
+                        <span class="chip">JAVA</span>
+                        <span class="chip">PAPER</span>
+                        <span class="chip">SPIGOT</span>
+                        <span class="chip">SQL</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SYSTEMS -->
+            <section class="section section-tight" style="padding-top:24px">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">// Systems</p>
+                        <h2 class="h2">What gets built<span class="grad-text">.</span></h2>
+                        <p class="lead" style="font-size:16px">Sunucunuza özel olarak geliştirilen modüller.</p>
+                    </div>
+                    <div class="systems-grid">
+                        <div class="system-item reveal"><span>Plugin Development</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Custom GUIs</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Clan Systems</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Economy</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>PVP Systems</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Quest Systems</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Staff Systems</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Player Statistics</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Discord Integration</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>Database Systems</span><span class="sys-dot" aria-hidden="true"></span></div>
+                        <div class="system-item reveal"><span>API Integrations</span><span class="sys-dot" aria-hidden="true"></span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE SHOWCASE -->
+            <section class="section section-tight">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">// Interactive Preview</p>
+                        <h2 class="h2">Systems in action<span class="grad-text">.</span></h2>
+                        <p class="lead" style="font-size:16px">Gerçek ekran görüntüsü değil — geliştirdiğim modüllerin temsili arayüz önizlemeleri.</p>
+                    </div>
+
+                    <div class="card mc-showcase reveal">
+                        <input type="radio" name="mcTab" id="tabConsole" class="tab-rad" checked>
+                        <input type="radio" name="mcTab" id="tabStats" class="tab-rad">
+                        <input type="radio" name="mcTab" id="tabGui" class="tab-rad">
+
+                        <div class="showcase-tabs" role="tablist" aria-label="Sistem önizlemeleri">
+                            <label for="tabConsole" role="tab" aria-selected="true">Plugin Console</label>
+                            <label for="tabStats" role="tab" aria-selected="false">Player Stats</label>
+                            <label for="tabGui" role="tab" aria-selected="false">GUI Layout</label>
+                        </div>
+
+                        <div class="showcase-body">
+                            <div class="showcase-panel" id="panelConsole">
+                                <div class="mc-showcase-head">
+                                    <p class="eyebrow" style="margin-bottom:10px">// Runtime Console</p>
+                                    <h3>Plugin boots, modules report status.</h3>
+                                </div>
+                                <div class="window">
+                                    <div class="window-bar">
+                                        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                        <span class="window-title">server/plugins/console.log</span>
+                                    </div>
+                                    <div class="console-body">
+                                        <div class="console-line"><span class="t">[02:11:13]</span><span class="sys">CHIVONZ</span><span>Loading module registry…</span></div>
+                                        <div class="console-line"><span class="t">[02:11:14]</span><span class="k">clan-core</span><span>initialized</span><span class="ok">[ OK ]</span></div>
+                                        <div class="console-line"><span class="t">[02:11:14]</span><span class="k">economy-core</span><span>initialized</span><span class="ok">[ OK ]</span></div>
+                                        <div class="console-line"><span class="t">[02:11:14]</span><span class="k">pvp-ladder</span><span>initialized</span><span class="ok">[ OK ]</span></div>
+                                        <div class="console-line"><span class="t">[02:11:15]</span><span class="k">discord-bridge</span><span>linked to crypto://api</span><span class="sys">[LINKED]</span></div>
+                                        <div class="console-line"><span class="t">[02:11:15]</span><span>sync queue drained</span><span class="ok">[ OK ]</span><span class="console-cursor" aria-hidden="true"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="showcase-panel" id="panelStats">
+                                <div class="mc-showcase-head">
+                                    <p class="eyebrow" style="margin-bottom:10px">// Player Statistics</p>
+                                    <h3>Per-player data, rendered live.</h3>
+                                </div>
+                                <div class="window">
+                                    <div class="window-bar">
+                                        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                        <span class="window-title">players/@stats/dashboard</span>
+                                    </div>
+                                    <div class="dash">
+                                        <div class="dash-row"><span class="dash-key">Player</span><span class="dash-val">#0042</span></div>
+                                        <div class="dash-row"><span class="dash-key">Kills</span><span class="dash-val sys">248</span></div>
+                                        <div class="dash-row"><span class="dash-key">Balance</span><span class="dash-val">12,400 ⛀</span></div>
+                                        <div class="dash-row"><span class="dash-key">Clan</span><span class="dash-val ok">ACTIVE</span></div>
+                                        <div class="dash-row"><span class="dash-key">Session</span><span class="dash-val">1h 42m</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="showcase-panel" id="panelGui">
+                                <div class="mc-showcase-head">
+                                    <p class="eyebrow" style="margin-bottom:10px">// GUI Layout</p>
+                                    <h3>Clean inventory menus, custom-designed.</h3>
+                                </div>
+                                <div class="window">
+                                    <div class="window-bar">
+                                        <span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                        <span class="window-title">gui/overview.layout</span>
+                                    </div>
+                                    <div class="gui-grid">
+                                        <span class="gui-slot hot">CLAN</span>
+                                        <span class="gui-slot">WARPS</span>
+                                        <span class="gui-slot">SHOP</span>
+                                        <span class="gui-slot">ECONOMY</span>
+                                        <span class="gui-slot">QUESTS</span>
+                                        <span class="gui-slot">PVP</span>
+                                        <span class="gui-slot hot">STATS</span>
+                                        <span class="gui-slot">STAFF</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TECH STACK -->
+            <section class="section section-tight">
+                <div class="container">
+                    <div class="section-head reveal">
+                        <p class="eyebrow">// Tech Stack</p>
+                        <h2 class="h2">Tools behind the systems<span class="grad-text">.</span></h2>
+                        <p class="lead" style="font-size:16px">Yalnızca projelerde gerçekten kullandığım teknolojiler.</p>
+                    </div>
+                    <div class="reveal">
+                        <span class="tag accent">Java</span>
+                        <span class="tag accent">Paper</span>
+                        <span class="tag accent">Spigot</span>
+                        <span class="tag">Bukkit API</span>
+                        <span class="tag">PlaceholderAPI</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Git / GitHub</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FINAL CTA -->
+            <section class="section">
+                <div class="container">
+                    <div class="final-cta reveal">
+                        <p class="eyebrow">// Let's build</p>
+                        <h2 class="h2">Build your <span class="grad-text">server system.</span></h2>
+                        <p class="lead">İstediğiniz sistemi anlatın — mimarisini birlikte planlayalım.</p>
+                        <div class="cta-actions">
+                            <a class="btn btn-primary btn-lg btn-magnetic" href="contact.html">Start a Project</a>
+                            <a class="btn btn-ghost btn-lg" href="services.html">All Services</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">C</span><span class="brand-name">CHIVONZ</span></a>
+                        <p>Digital Development Studio — web, Minecraft ve özel sistemler üzerine kurulu bağımsız geliştirme atölyesi.</p>
+                        <a class="btn btn-ghost btn-sm" href="contact.html">Start a Project</a>
+                    </div>
+                    <nav class="footer-col" aria-label="Sayfalar">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer-col" aria-label="Hizmetler">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="web.html">Web Development</a></li>
+                            <li><a href="minecraft.html">Minecraft Development</a></li>
+                            <li><a href="discord.html">Discord &amp; Automation</a></li>
+                            <li><a href="services.html">Server Systems</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/chivonz66" target="_blank" rel="noopener">GitHub →</a></li>
+                            <li><a href="contact.html">Discord</a></li>
+                            <li><a href="contact.html">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© <span id="footerYear">2026</span> CHIVONZ. Tüm hakları saklıdır.</p>
+                    <p><span class="footer-dot" aria-hidden="true"></span>Design &amp; code by CHIVONZ</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
