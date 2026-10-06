@@ -1,0 +1,103 @@
+/* ==========================================================================
+   CHIVONZ — responsive.css
+   1920 / 1440 / 1280 / 1180 / 1024 / 900 / 768 / 640 / 480 / 425 / 375 / 320
+   ========================================================================== */
+
+@media (min-width: 1920px) {
+    :root { --container: 1340px; }
+}
+
+@media (max-width: 1280px) {
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .home-hero .hero-title { font-size: clamp(44px, 8.5vw, 88px); }
+}
+
+@media (max-width: 1180px) {
+    .nav-desktop, .nav-cta { display: none; }
+    .nav-burger { display: inline-flex; }
+    .process-steps { grid-template-columns: repeat(3, 1fr); row-gap: 34px; }
+    .process-step:nth-child(n+4)::before { left: 0; right: 18px; }
+    .int-flow { flex-wrap: wrap; }
+    .int-node { min-width: 150px; flex: 1 1 30%; }
+    .int-node:nth-child(3)::after { display: none; }
+}
+
+@media (max-width: 1024px) {
+    .feature-split { grid-template-columns: 1fr; }
+    .feature-split .fs-visual { order: -1; }
+    .featured-project { grid-template-columns: 1fr; }
+    .featured-visual { border-left: 0; border-top: 1px solid var(--border); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .detail-layout { grid-template-columns: 1fr; }
+    .detail-aside { position: static; grid-template-columns: 1fr 1fr; }
+    .pr-layout, .contact-grid { grid-template-columns: 1fr 1fr; }
+    .tech-item { grid-template-columns: 44px 1fr; row-gap: 6px; }
+    .tech-item p { grid-column: 2; text-align: left; }
+}
+
+@media (max-width: 900px) {
+    .home-projects { grid-template-columns: 1fr 1fr; }
+    .web-process { grid-template-columns: 1fr; }
+    .global-process-steps { grid-template-columns: 1fr 1fr; }
+    .detail-row.about-row { grid-template-columns: 40px 1fr; }
+    .detail-row.about-row p { grid-column: 2; }
+}
+
+@media (max-width: 768px) {
+    .service-row { grid-template-columns: 40px 1fr auto; gap: 14px; padding-left: 8px; }
+    .service-row:hover { padding-left: 12px; }
+    .detail-row summary { grid-template-columns: 40px 1fr auto; gap: 14px; }
+    .detail-row .detail-body { padding-left: 54px; grid-template-columns: 1fr; gap: 22px; }
+    .int-flow { flex-direction: column; }
+    .int-node { flex: none; width: 100%; }
+    .int-node::after { content: "↓"; right: auto; top: auto; left: 50%; bottom: -16px; transform: translate(-50%, 14px); }
+    .int-node:last-child::after { display: none; }
+    .contact-channels { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .pr-layout { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .hero-scroll { display: none; }
+    .home-hero { min-height: 0; padding-top: calc(var(--nav-height) + 60px); }
+}
+
+@media (max-width: 640px) {
+    .home-projects { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step::before { left: 0; right: 24px; }
+    .detail-row.about-row { display: block; }
+    .detail-row.about-row .dr-index { margin-bottom: 8px; }
+    .detail-row.about-row h2 { margin-bottom: 12px; }
+    .detail-aside { grid-template-columns: 1fr; }
+    .showcase-tabs { width: 100%; flex-wrap: wrap; }
+    .showcase-tabs label { flex: 1; text-align: center; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    .hero-actions, .fs-actions, .cta-actions { flex-direction: column; }
+    .btn { width: 100%; justify-content: center; }
+    .hero-actions .btn, .fs-actions .btn, .cta-actions .btn { width: 100%; }
+    .service-row { grid-template-columns: 30px 1fr auto; }
+    .service-row .sr-arrow { display: none; }
+    .detail-row summary { grid-template-columns: 30px 1fr auto; }
+    .ticker-item { font-size: 11px; }
+}
+
+@media (max-width: 375px) {
+    .brand-name { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.001s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001s !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+    .ticker-track { animation: none; }
+    .featured-visual .fv-core { animation: none; }
+    body.has-glow .cursor-glow { opacity: 0; }
+}
